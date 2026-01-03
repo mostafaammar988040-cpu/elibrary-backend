@@ -16,8 +16,8 @@ builder.Services.AddHostedService<DueDateReminderService>();
 // ✅ Register HttpClient so OnlineSearchController can call external APIs
 builder.Services.AddHttpClient();
 // Database
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+//builder.Services.AddDbContext<AppDbContext>(options =>
+  //  options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 // ✅ JWT Authentication & Authorization
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -180,5 +180,6 @@ using (var scope = app.Services.CreateScope())
         context.SaveChanges();
     }
 }
+
 
 app.Run();
