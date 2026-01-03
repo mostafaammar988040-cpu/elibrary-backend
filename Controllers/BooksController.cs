@@ -10,12 +10,12 @@ namespace eLibrary.Api.Controllers
     [Route("api/[controller]")]
     public class BooksController : ControllerBase
     {
-        private readonly AppDbContext _context;
+      //  private readonly AppDbContext _context;
 
-        public BooksController(AppDbContext context)
-        {
-            _context = context;
-        }
+        //public BooksController(AppDbContext context)
+        //{
+          //  _context = context;
+        //}
 
         //  1. Get all books 
         [HttpGet]
@@ -111,4 +111,5 @@ namespace eLibrary.Api.Controllers
             return Ok(new { message = $"Book '{book.Title}' deleted." });
         }
     }
+
 }
